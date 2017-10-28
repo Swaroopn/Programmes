@@ -21,7 +21,7 @@ public class WildCardMatching
 		/* Assuming pattern will not contain multiple '*' */
 		boolean[][] T = new boolean[str.length + 1][pattern.length + 1];
 
-		/* T[0][0] will be always true */
+		/* T[0][0] will be always True */
 		T[0][0] = true;
 
 		/* if first char in pattern is '*' */
