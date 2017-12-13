@@ -7,10 +7,9 @@ public class Permutation
 {
 	public static void main( String[] ars )
 	{
-		String str = "abc";
+		String str = "abcd";
 		Set<String> out = generatePerm( str );
 		System.out.println( out );
-
 	}
 
 	public static Set<String> generatePerm( String input )
@@ -24,10 +23,8 @@ public class Permutation
 
 		if ( input.length() > 1 )
 		{
-			input = input.substring( 1 );
-
-			System.out.println( input );
-			Set<String> permSet = generatePerm( input );
+			System.out.println( "Generating perm for: " + input.substring( 1 ) );
+			Set<String> permSet = generatePerm( input.substring( 1 ) );
 
 			for ( String x : permSet )
 			{
@@ -41,6 +38,8 @@ public class Permutation
 		{
 			set.add( a + "" );
 		}
+		
+		System.out.println( "Total Perms: " + set.size() );
 		return set;
 	}
 }

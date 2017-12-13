@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 public class DuplicateItemLinkedList
 {
@@ -11,7 +11,7 @@ public class DuplicateItemLinkedList
 		list.linkLast( 10 );
 		list.linkLast( 10 );
 		list.linkLast( 50 );
-		
+
 		list.display();
 		list.removeDuplicate();
 		list.display();

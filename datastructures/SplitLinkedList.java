@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 public class SplitLinkedList
 {

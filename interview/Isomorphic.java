@@ -7,8 +7,8 @@ public class Isomorphic
 {
 	public static void main( String[] args )
 	{
-		String str1 = "ABCDEF";
-		String str2 = "ZQXYMP";
+		String str1 = "AABCDEF";
+		String str2 = "ZZQXYMP";
 
 		if ( isIsoMorphic( str1, str2 ) )
 			System.out.println( "IsoMorphic" );

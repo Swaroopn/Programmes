@@ -6,7 +6,8 @@ public class SecondMostFreqChar
 
 	public static void main( String[] args )
 	{
-		String str = "geeksforgeeks";
+		
+		String str = "geeksforgeekskbbb";
 		System.out.println( getSecondMostFrequentChar( str ) );
 	}
 

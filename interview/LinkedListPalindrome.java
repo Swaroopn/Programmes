@@ -16,7 +16,7 @@ public class LinkedListPalindrome
 		size++;
 	}
 
-	public boolean isPalindrom()
+	public boolean isPalindrome()
 	{
 		if ( first != null )
 		{
@@ -30,9 +30,7 @@ public class LinkedListPalindrome
 
 			for ( int i = 0; i < size / 2; i++ )
 			{
-				int item1 = f.item;
-				int item2 = temp.item;
-				if ( item1 == item2 )
+				if ( f.item == temp.item )
 				{
 					f = f.next;
 					temp = temp.prev;
@@ -71,7 +69,7 @@ public class LinkedListPalindrome
 		list.add( 20 );
 		list.add( 10 );
 
-		System.out.println( list.isPalindrom() );
+		System.out.println( list.isPalindrome() );
 	}
 
 }

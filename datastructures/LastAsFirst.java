@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 public class LastAsFirst
 {
@@ -12,7 +12,7 @@ public class LastAsFirst
 		list.linkLast( 40 );
 		list.linkLast( 50 );
 		list.linkLast( 60 );
-		
+
 		list.display();
 		list.makesLastAsFirst();
 		list.display();

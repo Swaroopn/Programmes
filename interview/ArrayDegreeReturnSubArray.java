@@ -24,9 +24,10 @@ public class ArrayDegreeReturnSubArray
 		for ( int i = 0; i < arr.length; i++ )
 		{
 			int value = arr[i];
-			if ( mapCount.get( value ) != null )
+			Integer count = mapCount.get( value );
+			if ( count != null )
 			{
-				mapCount.put( value, mapCount.get( value ) + 1 );
+				mapCount.put( value, ++count );
 			}
 			else
 			{

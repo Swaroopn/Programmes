@@ -7,9 +7,8 @@ public class CoinChange
 	public static void main( String[] args )
 	{
 		int[] arr =
-		{ 1, 4, 2, 5 };
-		int count = 6;
-
+		{ 1, 4, 2, 59 };
+		int count = 60;
 		System.out.println( countWays( arr, count ) );
 	}
 

@@ -1,7 +1,5 @@
 package interview;
 
-import java.util.Arrays;
-
 public class Anagrams2
 {
 
@@ -16,24 +14,13 @@ public class Anagrams2
 	{
 		for ( int i = 0; i < args.length - 1; i++ )
 		{
+			String firstSorted = StringHelper.getSortedString( args[i] );
 			for ( int j = i + 1; j < args.length; j++ )
 			{
-				if ( isAnagram( args[i], args[j] ) )
+				if ( firstSorted.equals( StringHelper.getSortedString( args[j] ) ) )
 					System.out.println( args[i] + "->" + args[j] );
 			}
 		}
-	}
-
-	private static boolean isAnagram( String str1, String str2 )
-	{
-		char[] c = str1.toCharArray();
-		Arrays.sort( c );
-		char[] c1 = str2.toCharArray();
-		Arrays.sort( c1 );
-
-		if ( Arrays.equals( c, c1 ) )
-			return true;
-		return false;
 	}
 
 }

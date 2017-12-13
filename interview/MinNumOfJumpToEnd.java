@@ -12,18 +12,15 @@ public class MinNumOfJumpToEnd
 
 	private static int minJumps( int[] arr, int n )
 	{
-		int jumps[] = new int[n]; // jumps[n-1] will hold the 
-		// result
+		int jumps[] = new int[n]; // jumps[n-1] will hold the result
 		int i, j;
 
 		if ( n == 0 || arr[0] == 0 )
-			return Integer.MAX_VALUE; // if first element is 0,
-		// end cannot be reached
+			return Integer.MAX_VALUE; // if first element is 0, end cannot be reached
 
 		jumps[0] = 0;
 
-		// Find the minimum number of jumps to reach arr[i]
-		// from arr[0], and assign this value to jumps[i]
+		// Find the minimum number of jumps to reach arr[i] from arr[0], and assign this value to jumps[i]
 		for ( i = 1; i < n; i++ )
 		{
 			jumps[i] = Integer.MAX_VALUE;
@@ -32,7 +29,7 @@ public class MinNumOfJumpToEnd
 				if ( i <= j + arr[j] && jumps[j] != Integer.MAX_VALUE )
 				{
 					jumps[i] = Math.min( jumps[i], jumps[j] + 1 );
-					System.out.println( jumps[i] );
+					//System.out.println( jumps[i] );
 					break;
 				}
 			}

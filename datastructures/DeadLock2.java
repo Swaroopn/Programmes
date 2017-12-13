@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 public class DeadLock2 extends Thread
 {
@@ -11,7 +11,6 @@ public class DeadLock2 extends Thread
 		}
 		catch ( InterruptedException e )
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

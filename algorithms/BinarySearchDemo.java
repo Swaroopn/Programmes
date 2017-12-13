@@ -1,10 +1,10 @@
-package com.interview.algorithms;
+package algorithm;
 
 public class BinarySearchDemo
 {
 	private final int SIZE = 10;
 	private int intArray[] = new int[SIZE];
-	
+
 	public BinarySearchDemo( int[] arr )
 	{
 		this.intArray = arr;
@@ -27,8 +27,8 @@ public class BinarySearchDemo
 			else
 				low = mid + 1;
 		}
+		
 		System.out.println( "Item not found" );
-
 	}
 
 	private void recursiveSearch( int item, int low, int high )

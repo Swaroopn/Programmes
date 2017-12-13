@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 import java.util.LinkedList;
 
@@ -40,7 +40,7 @@ public class ProducerConsumer
 				while ( this.list.size() == 0 )
 					wait();
 
-				int value = this.list.removeFirst();	//this.list.remove() is also same
+				int value = this.list.removeFirst(); //this.list.remove() is also same
 				System.out.println( "Consumed Value:" + value );
 				notify();
 				Thread.sleep( 1000 );

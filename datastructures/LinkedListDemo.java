@@ -1,4 +1,4 @@
-package com.interview.datastructures;
+package datastructures;
 
 import java.util.LinkedList;
 
@@ -16,9 +16,9 @@ public class LinkedListDemo extends LinkedList<LinkedListDemo>
 		Node temp = new Node( item, null, f );
 		first = temp;
 		if ( f == null )
-			last = temp;
+			last = f;
 		else
-			f.prev = temp;
+			f.prev = first;
 
 		size++;
 	}
@@ -29,9 +29,9 @@ public class LinkedListDemo extends LinkedList<LinkedListDemo>
 		Node temp = new Node( item, l, null );
 		last = temp;
 		if ( l == null )
-			first = temp;
+			first = last;
 		else
-			l.next = temp;
+			l.next = last;
 
 		size++;
 	}
@@ -173,6 +173,7 @@ public class LinkedListDemo extends LinkedList<LinkedListDemo>
 				temp.next = cur;
 				cur = temp;
 			}
+
 			first = cur;
 		}
 	}

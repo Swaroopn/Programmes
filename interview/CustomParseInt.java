@@ -9,7 +9,7 @@ public class CustomParseInt
 		System.out.println( value );
 	}
 
-	private static int convertStringToInt( String str )
+	static private int convertStringToInt( String str )
 	{
 		int sum = 0;
 		int len = str.length() - 1;

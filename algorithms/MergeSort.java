@@ -1,4 +1,4 @@
-package com.interview.algorithms;
+package algorithm;
 
 public class MergeSort
 {

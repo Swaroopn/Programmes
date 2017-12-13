@@ -4,7 +4,7 @@ public class CountWords
 {
 	public static void main( String[] args )
 	{
-		String sentence = "This is\n a     long sentence";
+		String sentence = "This  is\n a     long sentence";
 		System.out.println( getTotalWords( sentence ) );
 	}
 

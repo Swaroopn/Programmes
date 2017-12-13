@@ -8,13 +8,12 @@ public class ChainWordsToFormCircle
 	public static void main( String[] args )
 	{
 		String[] words =
-		{ "swa", "kjl", "lmn", "nos" };
+		{ "kjl", "lmn", "nos", "swk" };
 
 		List<String> result = checkIfChainingPossiblw( words );
 		if ( result != null && result.size() > 0 )
 		{
-			for ( String r : result )
-				System.out.println( r );
+			System.out.println( "Chaining is possible" );
 		}
 		else
 			System.out.println( "Chaining not possible" );

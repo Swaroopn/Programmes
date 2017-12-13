@@ -20,6 +20,7 @@ public class PalindromeInAString
 		{
 			for ( int j = i; j < str.length(); j++ )
 			{
+				System.out.println( "comparing: " + str.substring( i, j + 1 ) );
 				String subStr = str.substring( i, j + 1 );
 				if ( isPalindrome( subStr ) )
 					palindromeSet.add( subStr );

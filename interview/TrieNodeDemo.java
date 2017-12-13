@@ -10,8 +10,7 @@ class TrieNode
 	boolean isLeaf;
 
 	public TrieNode()
-	{
-	}
+	{}
 
 	public TrieNode( char c )
 	{

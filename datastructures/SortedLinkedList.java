@@ -1,6 +1,6 @@
-package com.interview.datastructures;
+package datastructures;
 
-import com.interview.datastructures.LinkedListDemo.Node;
+import datastructures.LinkedListDemo.Node;
 
 public class SortedLinkedList
 {

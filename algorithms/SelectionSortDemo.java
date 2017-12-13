@@ -1,56 +1,29 @@
-package com.interview.algorithms;
-
-/*
- * Swaroop Nagendra 
- * Analysis = n(n-1)/2 ~ n^2
- */
-
-class SelectionSort
-{
-	private String[] items;
-
-	SelectionSort( String[] items )
-	{
-		this.items = items;
-	}
-
-	public void sort()
-	{
-		int count = this.items.length;
-		for ( int i = 0; i < count; i++ )
-		{
-			int min = i;
-			for ( int j = i + 1; j < count; j++ )
-			{
-				if ( this.items[j].compareTo( this.items[min] ) < 0 )
-					swap( this.items, min, j );
-			}
-		}
-	}
-
-	public void swap( String[] name, int i, int j )
-	{
-		String temp = name[i];
-		name[i] = name[j];
-		name[j] = temp;
-	}
-
-	public void display()
-	{
-		for ( int i = 0; i < this.items.length; i++ )
-			System.out.println( this.items[i] );
-	}
-
-}
+package algorithm;
 
 public class SelectionSortDemo
 {
 	public static void main( String[] args )
 	{
-		String[] name = new String[]
-		{ "x", "a", "d", "b", "e", "c", "z" };
-		SelectionSort obj = new SelectionSort( name );
-		obj.sort();
-		obj.display();
+		int arr[] =
+		{ 5, 3, 7, 10, 2, 1, 6, 9 };
+		selectionSort( arr );
+		for ( int i = 0; i < arr.length; i++ )
+			System.out.print( arr[i] + " " );
+	}
+
+	private static void selectionSort( int[] arr )
+	{
+		for ( int i = 0; i < arr.length - 1; i++ )
+		{
+			int min = i;
+			for ( int j = i + 1; j < arr.length; j++ )
+			{
+				if ( arr[j] < arr[min] )
+					min = j;
+			}
+			int temp = arr[i];
+			arr[i] = arr[min];
+			arr[min] = temp;
+		}
 	}
 }
