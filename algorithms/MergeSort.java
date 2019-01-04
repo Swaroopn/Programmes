@@ -14,7 +14,7 @@ public class MergeSort
 	{
 		if ( low < high )
 		{
-			int mid = ( low + high ) / 2;
+			int mid = low + ( ( high - low ) / 2 );	// to avoid overflow
 			sort( arr, low, mid );
 			sort( arr, mid + 1, high );
 			merge( arr, low, mid, high );
