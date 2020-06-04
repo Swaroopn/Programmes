@@ -88,7 +88,8 @@ public class Singleton
 		{
 			synchronized (Singleton.class)
 			{
-				dclImprovedInst = new Singleton();
+				if ( dclImprovedInst == null )
+					dclImprovedInst = new Singleton();
 			}
 		}
 		return dclImprovedInst;
