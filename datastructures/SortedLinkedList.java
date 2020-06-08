@@ -20,20 +20,20 @@ public class SortedLinkedList
 		list.display();
 	}
 
-	private static LinkedListDemo sort( LinkedListDemo first, LinkedListDemo second )
+	private static LinkedListDemo sort( LinkedListDemo list1, LinkedListDemo list2 )
 	{
-		if ( first == null )
-			return second;
+		if ( list1 == null )
+			return list2;
 
-		if ( second == null )
-			return first;
+		if ( list2 == null )
+			return list1;
 
-		Node cur = first.first;
+		Node cur = list1.first;
 		while ( cur.next != null )
 			cur = cur.next;
 
-		cur.next = second.first;
+		cur.next = list2.first;
 
-		return first;
+		return list1;
 	}
 }
