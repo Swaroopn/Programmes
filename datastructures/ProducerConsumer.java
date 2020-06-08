@@ -51,43 +51,26 @@ public class ProducerConsumer
 	public static void main( String[] args )
 	{
 		ProducerConsumer p = new ProducerConsumer( 5 );
-		Thread producer = new Thread( new Runnable()
-		{
-
-			@Override
-			public void run()
+		new Thread( () -> {
+			try
 			{
-				try
-				{
-					p.produce();
-				}
-				catch ( InterruptedException e )
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				p.produce();
 			}
-		} );
-
-		Thread consumer = new Thread( new Runnable()
-		{
-
-			@Override
-			public void run()
+			catch ( InterruptedException e )
 			{
-				try
-				{
-					p.consume();
-				}
-				catch ( InterruptedException e )
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				e.printStackTrace();
 			}
-		} );
+		} ).start();
 
-		producer.start();
-		consumer.start();
+		new Thread( () -> {
+			try
+			{
+				p.consume();
+			}
+			catch ( InterruptedException e )
+			{
+				e.printStackTrace();
+			}
+		} ).start();
 	}
 }
