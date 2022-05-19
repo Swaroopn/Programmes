@@ -5,17 +5,11 @@ import java.util.Map;
 
 class TrieNode
 {
-	char c;
 	Map<Character, TrieNode> children = new HashMap<>();
 	boolean isLeaf;
 
 	public TrieNode()
 	{}
-
-	public TrieNode( char c )
-	{
-		this.c = c;
-	}
 }
 
 class Trie
@@ -39,7 +33,7 @@ class Trie
 				t = children.get( currentChar );
 			else
 			{
-				t = new TrieNode( currentChar );
+				t = new TrieNode();
 				children.put( currentChar, t );
 			}
 
@@ -53,10 +47,7 @@ class Trie
 	public boolean search( String word )
 	{
 		TrieNode t = searchNode( word );
-		if ( t != null && t.isLeaf )
-			return true;
-		else
-			return false;
+		return t != null && t.isLeaf;
 	}
 
 	private TrieNode searchNode( String word )
@@ -80,10 +71,7 @@ class Trie
 
 	public boolean containsPrefix( String word )
 	{
-		if ( searchNode( word ) == null )
-			return false;
-
-		return true;
+		return !(searchNode( word ) == null);
 	}
 }
 
